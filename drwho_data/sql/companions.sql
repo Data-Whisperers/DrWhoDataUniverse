@@ -1,46 +1,19 @@
--- phpMyAdmin SQL Dump
--- version 4.8.0.1
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: Nov 08, 2018 at 07:10 PM
--- Server version: 8.0.11
--- PHP Version: 7.1.19
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `drwho`
---
 
--- --------------------------------------------------------
-
---
--- Table structure for table `companions`
---
-
-CREATE TABLE `companions` (
-  `id` int(11) NOT NULL,
-  `character_name` text NOT NULL,
-  `actor` text NOT NULL,
-  `dr_id` int(11) NOT NULL,
-  `dr_id_2` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE companions (
+  id int(11) NOT NULL,
+  character_name text NOT NULL,
+  actor text NOT NULL,
+  dr_id int(11) NOT NULL,
+  dr_id_2 int(11) NOT NULL
+);
 
 --
--- Dumping data for table `companions`
+-- Dumping data for table companions
 --
 
-INSERT INTO `companions` (`id`, `character_name`, `actor`, `dr_id`, `dr_id_2`) VALUES
+INSERT INTO companions (id, character_name, actor, dr_id, dr_id_2) VALUES
 (1, 'Susan', 'Carole Ann Ford', 1, 0),
 (2, 'Barbara Wright', 'Jacqueline Hill', 1, 0),
 (3, 'Ian Chesterton', 'William Russell', 1, 0),
@@ -96,20 +69,20 @@ INSERT INTO `companions` (`id`, `character_name`, `actor`, `dr_id`, `dr_id_2`) V
 --
 
 --
--- Indexes for table `companions`
+-- Indexes for table companions
 --
-ALTER TABLE `companions`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE companions
+  ADD PRIMARY KEY (id);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `companions`
+-- AUTO_INCREMENT for table companions
 --
-ALTER TABLE `companions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+ALTER TABLE companions
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
